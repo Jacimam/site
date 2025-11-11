@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jacimam — Coming Soon</title>
+  <meta name="description" content="Jacimam — full-service digital media: streaming content production, distribution, and digital advertising." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    /* Reset / base */
+    :root{
+      --bg1:#061021;
+      --bg2:#08162b;
+      --accent:#00d4ff;
+      --muted:#9aa7b3;
+      --card:#071428cc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max-width:1000px;
+      --ease:cubic-bezier(.2,.9,.3,1);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color: #eaf6ff;
+      background: linear-gradient(135deg,var(--bg1) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      line-height:1.4;
+      overflow-y:auto;
+    }
+
+    /* animated radial lights layered */
+    .bg-lights{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background:
+        radial-gradient(600px 300px at 10% 20%, rgba(0,212,255,0.06), transparent 10%),
+        radial-gradient(500px 260px at 90% 80%, rgba(255,0,150,0.04), transparent 12%),
+        radial-gradient(300px 200px at 50% 50%, rgba(0,255,150,0.03), transparent 8%);
+      animation: float 18s linear infinite;
+      mix-blend-mode:screen;
+    }
+    @keyframes float{
+      0%{transform: translateY(0) rotate(0deg)}
+      50%{transform: translateY(-20px) rotate(1deg)}
+      100%{transform: translateY(0) rotate(0deg)}
+    }
+
+    /* Main container */
+    .container{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width:var(--max-width);
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:28px;
+      align-items:center;
+      padding:36px;
+    }
+
+    /* Card */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:32px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      backdrop-filter: blur(6px) saturate(110%);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    /* Left content */
+    .brand{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .logo{
+      width:84px;
+      height:84px;
+      min-width:84px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .logo svg{width:56px;height:56px;display:block}
+
+    .brand h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.4px;
+      font-weight:700;
+    }
+    .brand p.short{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .headline{
+      margin-top:22px;
+      font-size:28px;
+      font-weight:700;
+      line-height:1.05;
+    }
+    .lead{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:15px;
+      max-width:64ch;
+    }
+
+    /* Right panel: info + actions */
+    .side{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .status-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      background: linear-gradient(90deg, rgba(0,212,255,0.08), rgba(0,255,200,0.03));
+      color:var(--accent);
+      font-weight:600;
+      font-size:13px;
+      width:fit-content;
+    }
+    .count{
+      font-family:var(--mono);
+      font-weight:700;
+      font-size:22px;
+      letter-spacing:0.6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none;
+      border:0;
+      padding:12px 16px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:700;
+      font-size:14px;
+      transition:transform .18s var(--ease), box-shadow .18s var(--ease);
+      box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+      background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      color: #eaffff;
+      border: 1px solid rgba(255,255,255,0.04);
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{
+      background: linear-gradient(90deg, rgba(0,212,255,0.12), rgba(0,212,255,0.06));
+      color: #00131a;
+      border: 1px solid rgba(0,212,255,0.22);
+    }
+    .btn-ghost{
+      background:transparent;
+      color:var(--muted);
+      border: 1px dashed rgba(255,255,255,0.04);
+    }
+
+    /* small form */
+    .notify{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .notify input[type="email"]{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.04);
+      padding:10px 12px;
+      border-radius:10px;
+      color: #eaffff;
+      outline:none;
+      min-width:0;
+      flex:1;
+    }
+    .notify input::placeholder{color:rgba(234,246,255,0.22)}
+    .muted{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* footer row */
+    .footer{
+      margin-top:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .social{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .social a{
+      display:inline-grid;
+      place-items:center;
+      width:38px;height:38px;
+      border-radius:8px;
+      background:var(--glass);
+      border:1px solid rgba(255,255,255,0.02);
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* responsive */
+    @media (max-width:920px){
+      .container{grid-template-columns:1fr; padding:22px}
+      .side{order:2}
+    }
+    @media (max-width:420px){
+      .logo{width:70px;height:70px;min-width:70px}
+      .headline{font-size:22px}
+      .brand h1{font-size:18px}
+    }
+
+    /* small glowing underline */
+    .highlight{
+      display:inline-block;
+      position:relative;
+      padding-bottom:6px;
+    }
+    .highlight::after{
+      content:"";
+      position:absolute;
+      left:0;right:0;bottom:0;
+      height:6px;
+      border-radius:6px;
+      background:linear-gradient(90deg,var(--accent), rgba(0,255,150,0.6));
+      filter: blur(10px);
+      opacity:0.25;
+      transform:translateY(4px);
+      transition:opacity .2s;
+    }
+    .btn-primary:hover{transform:translateY(-4px)}
+  </style>
+</head>
+<body>
+  <div class="bg-lights" aria-hidden="true"></div>
+
+  <main class="container" role="main" aria-labelledby="title">
+    <!-- LEFT -->
+    <section class="card" aria-labelledby="title">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">
+          <!-- simple wordmark / logo placeholder: replace with real SVG -->
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jacimam logo">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#00d4ff"/>
+                <stop offset="1" stop-color="#00ff9a"/>
+              </linearGradient>
+            </defs>
+            <rect rx="18" width="100" height="100" fill="url(#g)"/>
+            <text x="50" y="58" font-family="sans-serif" font-weight="700" font-size="44" text-anchor="middle" fill="#02121a">J</text>
+          </svg>
+        </div>
+        <div>
+          <h1 id="title">Jacimam</h1>
+          <p class="short">Digital media • Streaming • Programmatic ads</p>
+        </div>
+      </div>
+
+      <h2 class="headline">We create moments that stream — <span class="highlight">Launching soon</span></h2>
+
+      <p class="lead">
+        Jacimam is a full-service digital media company specializing in streaming content production, distribution, and digital advertising solutions.
+        We combine creative storytelling, advanced technology, and data-driven strategy to help brands connect across OTT/CTV, live and on-demand platforms.
+      </p>
+
+      <p class="muted" style="margin-top:14px">
+        From concept to conversion — content creation, ad trafficking, audience targeting, and performance analytics — all under one roof.
+      </p>
+
+      <div class="footer" style="gap:18px;flex-wrap:wrap">
+        <div class="muted">Contact: <a href="mailto:operations@jacimam.com" style="color:var(--accent); text-decoration:none; font-weight:700">operations@jacimam.com</a></div>
+        <div class="social" aria-hidden="false">
+          <!-- Replace href with real social links -->
+          <a href="#" aria-label="LinkedIn (placeholder)" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4.98 3.5C4.98 4.6 4.12 5.5 3.07 5.5 2.02 5.5 1.16 4.6 1.16 3.5 1.16 2.4 2.02 1.5 3.07 1.5 4.12 1.5 4.98 2.4 4.98 3.5Z" fill="currentColor"/><path d="M.5 8.5h5v13h-5v-13zM9.5 8.5h4.8v1.8h.1c.7-1.3 2.5-2.6 5.1-2.6 5.4 0 6.4 3.6 6.4 8.2v9.6h-5v-8.5c0-2.1 0-4.9-3-4.9-3 0-3.5 2.4-3.5 4.8v8.6h-5v-13z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="X / Twitter (placeholder)" title="X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 5.92c-.64.28-1.32.47-2.03.55.73-.44 1.28-1.14 1.54-1.97-.69.4-1.45.7-2.26.86C18.8 4.4 17.9 4 17 4c-1.37 0-2.48 1.1-2.48 2.46 0 .19.02.37.06.54-2.06-.1-3.89-1.09-5.12-2.6-.21.35-.33.76-.33 1.19 0 .82.42 1.55 1.06 1.98-.62-.02-1.2-.19-1.7-.47v.05c0 1.18.84 2.17 1.96 2.39-.51.14-1.05.17-1.6.06.45 1.38 1.73 2.38 3.26 2.41-1.2.95-2.7 1.52-4.34 1.52-.28 0-.55-.02-.82-.05 1.56 1.01 3.41 1.6 5.4 1.6 6.46 0 9.99-5.35 9.99-9.99v-.46c.68-.51 1.26-1.15 1.72-1.88-.62.28-1.28.48-1.97.56z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDE ACTIONS -->
+    <aside class="side">
+      <div class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div class="status-pill" aria-hidden="true">
+          <span style="font-size:12px">Status</span>
+          <span class="count" id="count-days" aria-live="polite">Launching Soon</span>
+        </div>
+
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+            <div>
+              <div class="muted" style="font-size:13px">Notify me</div>
+              <div style="font-weight:700">Get updates before launch</div>
+            </div>
+            <div style="font-size:12px;color:var(--muted)">No spam • unsubscribe anytime</div>
+          </div>
+
+          <form class="notify" onsubmit="notify(event)">
+            <input type="email" id="email" name="email" placeholder="your@email.com" required aria-label="Your email address"/>
+            <button class="btn btn-primary" type="submit" aria-label="Notify me">Notify</button>
+          </form>
+
+          <p class="muted" style="margin-top:10px">Or reach us directly at <a href="mailto:operations@jacimam.com" style="color:var(--accent);text-decoration:none">operations@jacimam.com</a></p>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="muted">Services</div>
+            <div style="font-weight:700">Streaming • Ads • Analytics</div>
+          </div>
+          <div style="text-align:right;color:var(--muted);font-size:13px">Integrated solutions</div>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-ghost" onclick="mailtoOps()">Contact Ops</button>
+          <a class="btn" href="#" role="button" aria-label="Learn more (placeholder)">Learn more</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // "Notify" form opens the user's mail client with prefilled subject/body.
+    function notify(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value || '';
+      const subject = encodeURIComponent('Notify me: Jacimam launch');
+      const body = encodeURIComponent(`Please add ${email} to the launch notification list.\n\nThanks,\n${email}`);
+      // Opens user's mail client
+      window.location.href = `mailto:operations@jacimam.com?subject=${subject}&body=${body}`;
+      // Basic feedback by temporarily changing the button text
+      const btn = e.target.querySelector('button');
+      const old = btn.innerText;
+      btn.innerText = 'Opening mail…';
+      setTimeout(()=> btn.innerText = old, 2200);
+    }
+
+    function mailtoOps(){
+      location.href = 'mailto:operations@jacimam.com';
+    }
+
+    // Small progressive "type" effect for the "Launching Soon" text (non-critical)
+    (function(){
+      const el = document.getElementById('count-days');
+      if(!el) return;
+      const texts = ["Launching Soon", "Building the future of streaming", "See you on launch day"];
+      let i = 0;
+      function cycle(){
+        el.style.opacity = 0;
+        setTimeout(()=> {
+          el.textContent = texts[i % texts.length];
+          el.style.opacity = 1;
+          i++;
+        }, 260);
+      }
+      setInterval(cycle, 4200);
+    })();
+  </script>
+</body>
+</html>
