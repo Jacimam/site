@@ -1777,3 +1777,101 @@ video.unrulymedia.com, 9085206363819624071, RESELLER
 yahoo.com, 57289, RESELLER, e1a5b5b6e3255540
 yahoo.com, 59817, RESELLER, e1a5b5b6e3255540
 #Freecast END
+
+
+Steve Charlier
+12:51 PM (28 minutes ago)
+to me
+
+#LoopMe
+loopme.com,16718,DIRECT,6c8d5f95897a5a3b
+prado.co,15580,RESELLER
+indexexchange.com,211613,RESELLER,50b1c356f2c5c8fc
+smartadserver.com,4625,RESELLER,060d053dcf45cbf3
+xandr.com,13799,RESELLER
+ushareit.com,LC98ffe3f38a46423e,RESELLER
+bematterfull.com,792278057361,RESELLER
+yeahmobi.com,5135302,RESELLER
+thebrave.io,1234628,RESELLER,c25b2154543746ac
+media.net,8CUC0721K,RESELLER
+kidoz.net,15467,RESELLER,a109366414b7335e
+sabio.us,100201,RESELLER,96ed93aaa9795702
+smoot.ai,100087,RESELLER
+zmaticoo.com,5135302,RESELLER
+video.unrulymedia.com,2148207460,RESELLER
+sharethrough.com,6qlnf8SY,RESELLER,d53b998a7bd4ecd2
+opera.com,pub7275292332480,RESELLER,55a0c5fd61378de3
+lunamedia.io,193bca549318aed0434226d4d73e13f3,RESELLER,524ecb396915caaf
+freewheel.tv,536110-r-524565,RESELLER
+admanmedia.com,2045,RESELLER
+freewheel.tv,536110-r-523319,RESELLER
+consumable.com,2001559,RESELLER,aefcd3d2f45b5070
+triplelift.com,12158,RESELLER,6c33edb13117fd86
+pubmatic.com,158154,RESELLER,5d62403b186f2ace
+krushmedia.com,AJxF6R662a9M6CaTvK,RESELLER
+pubnative.net,1007485,RESELLER,d641df8625486a7b
+smaato.com,1100004890,RESELLER,07bcf65f187117b4
+boostappi.com,10013,RESELLER
+taurusx.com,80614,RESELLER
+thebrave.io,1234585,RESELLER,c25b2154543746ac
+33across.com,0015a00002egvRSAAY,RESELLER,bbea06d9c4d2853c
+appnexus.com,15349,RESELLER,f5ab79cb980f11d1
+axonix.com,57869,RESELLER
+appnexus.com,7556,RESELLER,f5ab79cb980f11d1
+onetag.com,6c68086c0c61793,RESELLER
+thisisdax.com,5329,RESELLER
+tritondigital.com,106423,RESELLER,19b4454d0b87b58b
+contextweb.com,562726,RESELLER,89ff185a4c4e857c
+appnexus.com,12878,RESELLER,f5ab79cb980f11d1
+inmobi.com,ef083d721beb4c0f8776ced01e262c03,RESELLER,83e75a7ae333ca9d
+trustedstack.com,TSCLS3659,RESELLER
+contextweb.com,562329,RESELLER,89ff185a4c4e857c
+inmobi.com,ddb41d8a9f434a918d05a0fc9999d9f9,RESELLER,83e75a7ae333ca9d
+tropicsgames.com,a75395d9-5944-4f00-9282-d26f3756d83e,RESELLER
+inmobi.com,30f3830cfef249a3ad46ee1a0bba7af3,RESELLER,83e75a7ae333ca9d
+vidazoo.com,66a936797145df0667ebe4e0,RESELLER,b6ada874b4d7d0b2
+advlion.com,3108,RESELLER
+meitu.com,699,RESELLER
+olaex.biz,100131,RESELLER
+richaudience.com,flNoR9ht06,RESELLER
+visiblemeasures.com,1020,RESELLER
+onetag.com,8c90176af2e65c8,RESELLER
+adtarget.com.tr,739050,RESELLER
+
+#TVIQ
+thejungletechnology.com, 3199488, DIRECT
+google.com, pub-3328898302928686, RESELLER, f08c47fec0942fa0
+lijit.com, 560797, RESELLER, fafdf38b16bf6b2b #SOVRN
+
+
+#SafeX
+safex.tv, 5062, DIRECT
+filmzie.com, 9894110, DIRECT
+pubmatic.com, 164351, RESELLER, 5d62403b186f2ace
+samba.tv, 230678, RESELLER
+kargo.com, 8767, RESELLER
+lijit.com, 488676, RESELLER, fafdf38b16bf6b2b #CTV
+beachfront.com, 13460, RESELLER, e2541279e8e2ca4d
+xandr.com, 13363, RESELLER, f5ab79cb980f11d1
+video.unrulymedia.com, 749958898, RESELLER
+sharethrough.com, xqei8jM6, RESELLER, d53b998a7bd4ecd2
+sharethrough.com, rQQHK6F4, RESELLER, d53b998a7bd4ecd2
+castify.ai, 1275128, RESELLER
+inmobi.com, 29b9140cf4f54b08869d586a7a76621d, RESELLER, 83e75a7ae333ca9d
+grouprvn.com, l2i2Ri5G21, RESELLER
+contextweb.com, 563544, RESELLER, 89ff185a4c4e857c
+freewheel.tv, 1205439, RESELLER
+freewheel.tv, 1205455, RESELLER
+thebrave.io, 1234736, RESELLER, c25b2154543746ac  
+
+#Indicue
+indicue.com, 3621, DIRECT
+orka.tv, 15297402, RESELLER, 41c84499561af3f3
+sharethrough.com, MCsBPyBb, RESELLER, d53b998a7bd4ecd2
+smartadserver.com, 4342, RESELLER, 060d053dcf45cbf3
+pubmatic.com,165230,RESELLER,5d62403b186f2ace
+conversantmedia.com, 100783, RESELLER, 03113cd04947736d
+connatix.com, 1875706473374569, RESELLER, 2af98acdee0e81ed
+sonobi.com, f2f8239847, RESELLER, d1a215d9eb5aee9e
+C360.com, 2156, RESELLER
+media.net, 8CU8M124S, RESELLER
