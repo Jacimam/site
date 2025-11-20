@@ -1115,18 +1115,27 @@ yieldmo.com, 3078438591206989879, RESELLER, #ortb
 yieldmo.com, 3081538394287710485, RESELLER, #ortbctv
 
 #SafeX
-safex.tv, 5045, DIRECT
+safex.tv, 5062, DIRECT
+filmzie.com, 5062, DIRECT
 pubmatic.com, 164351, RESELLER, 5d62403b186f2ace
-xandr.com, 13363, RESELLER, f5ab79cb980f11d1
-telaria.com, tz24j-r26au, RESELLER, 1a4e959a1b50034a
-telaria.com, tz24j-lgtzn, RESELLER, 1a4e959a1b50034a
 samba.tv, 230678, RESELLER
-tremorhub.com, tz24j-r26au, RESELLER, 1a4e959a1b50034a
-tremorhub.com, tz24j-lgtzn, RESELLER, 1a4e959a1b50034a
-grouprvn.com, 420201131, DIRECT
-xandr.com, 13291, RESELLER
-video.unrulymedia.com, 149448201, RESELLER
-filmzie.com, 9894076, RESELLER
+kargo.com, 8767, RESELLER
+lijit.com, 488676, RESELLER, fafdf38b16bf6b2b #CTV
+beachfront.com, 13460, RESELLER, e2541279e8e2ca4d
+xandr.com, 13363, RESELLER, f5ab79cb980f11d1
+video.unrulymedia.com, 749958898, RESELLER
+sharethrough.com, xqei8jM6, RESELLER, d53b998a7bd4ecd2
+sharethrough.com, rQQHK6F4, RESELLER, d53b998a7bd4ecd2
+castify.ai, 1275128, RESELLER
+inmobi.com, 29b9140cf4f54b08869d586a7a76621d, RESELLER, 83e75a7ae333ca9d
+grouprvn.com, l2i2Ri5G21, RESELLER
+contextweb.com,563544,RESELLER,89ff185a4c4e857c
+freewheel.tv, 1205439, RESELLER
+freewheel.tv, 1205455, RESELLER
+thebrave.io, 1234736, RESELLER, c25b2154543746ac
+Adsphere360.com, 1051339, RESELLER 
+aniview.com, 619b939a2a18ac2da032a84, RESELLER, 78b21b97965ec3f8
+sunmedia.tv, 952eff0a-6ab3-4083-903d-4a9fb3d837a4, RESELLER
 
 #Connatix
 connatix.com, 1520353974880723, RESELLER, 2af98acdee0e81ed
